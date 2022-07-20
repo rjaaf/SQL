@@ -1,0 +1,23 @@
+--Create a grocery store database
+
+CREATE TABLE kurdistan_pride (id INTEGER PRIMARY KEY, apparel TEXT, size TEXT, color TEXT, price TEXT, inventory INTEGER);
+INSERT into kurdistan_pride values (1, "PLAIN T-SHIRT", "S", "RED", "19.99", 4);
+INSERT into kurdistan_pride values (2, "PLAIN T-SHIRT", "M", "RED", "19.99", 4);
+INSERT into kurdistan_pride values (3, "PLAIN T-SHIRT", "L", "RED","19.99", 4);
+INSERT into kurdistan_pride values (4, "PLAIN T-SHIRT", "S", "BLUE","19.99", 4);
+INSERT into kurdistan_pride values (5, "PLAIN T-SHIRT", "M", "BLUE","19.99", 4);
+INSERT into kurdistan_pride values (6, "PLAIN T-SHIRT", "L", "BLUE","19.99", 4);
+INSERT into kurdistan_pride values (7, "SWEATER", "S", "RED","24.99", 4);
+INSERT into kurdistan_pride values (8, "SWEATER", "M", "RED","24.99", 4);
+INSERT into kurdistan_pride values (9, "SWEATER", "L", "RED","24.99", 4);
+INSERT into kurdistan_pride values (10, "JOGGERS", "S", "BLACK","24.99", 6);
+INSERT into kurdistan_pride values (11, "JOGGERS", "M", "BLACK","24.99", 6);
+INSERT into kurdistan_pride values (12, "JOGGERS", "L", "BLACK","24.99", 6);
+
+--display the database ordered by price. 
+
+SELECT * from kurdistan_pride order by price;
+
+--display the database of small size items over $20. 
+
+SELECT * from kurdistan_pride where price > 20 and size = "S";
